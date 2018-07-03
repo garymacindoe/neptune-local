@@ -23,16 +23,22 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-> require 'neptune/local'
+irb(main):001:0> require 'neptune/local'
+=> true
+irb(main):002:0> neptune = Neptune::Local::Server.new
+=> #<Neptune::Local::Server:0x00007fa7cb05d0a0 @debug=nil, @gremlin_home=nil, @gremlin_yaml=nil, @log_dir=nil, @pid_dir=nil, @runas=nil, @java_home=nil, @java_options=nil>
+irb(main):003:0> neptune.start
+Server started 4085.
+=> nil
+irb(main):004:0> neptune.restart
+Server stopped [4085]
+Server started 4114.
+=> nil
+irb(main):005:0> neptune.stop
+Server stopped [4114]
+=> nil
 
-> Neptune::Local::Server.start
-Server started 6388.
-
-> Neptune::Local::Server.stop
-Server stopped [6388]
 ```
-
-Configuration can be done via [environment variables](http://tinkerpop.apache.org/docs/3.3.2/reference/#_configuring_2).
 
 ## Contributing
 
