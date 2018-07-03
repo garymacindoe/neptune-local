@@ -6,14 +6,14 @@ module Neptune
 
       attr_reader :debug, :gremlin_home, :gremlin_yaml, :log_dir, :pid_dir, :runas, :java_home, :java_options
 
-      def initialize(debug = nil,
-                     gremlin_home = nil,
-                     gremlin_yaml = nil,
-                     log_dir = nil,
-                     pid_dir = nil,
-                     runas = nil,
-                     java_home = nil,
-                     java_options = nil)
+      def initialize(debug: nil,
+                     gremlin_home: nil,
+                     gremlin_yaml: nil,
+                     log_dir: nil,
+                     pid_dir: nil,
+                     runas: nil,
+                     java_home: nil,
+                     java_options: nil)
         @debug = debug
         @gremlin_home = gremlin_home
         @gremlin_yaml = gremlin_yaml
